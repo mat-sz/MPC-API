@@ -4,7 +4,9 @@ These endpoints provide knowledge of server's supported functionality to the cli
 
 ## About
 
-```GET /about```
+```
+GET /about
+```
 
 ### Response
 
@@ -27,10 +29,14 @@ These endpoints provide knowledge of server's supported functionality to the cli
 }
 ```
 
+`name`, `version` and `supportedFeatures` are required.
+
 ## Icon
 
 *(not required)*
 
-```GET /icon.png```
+```
+GET /icon.png
+```
 
 If present must be a PNG file, served with the `image/png` MIME type and the PNG image data as the response payload. The aspect ratio must be 1:1, resolution should be at least 128x128px.

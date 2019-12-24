@@ -12,11 +12,15 @@ The process itself is as follows:
 
 The token must be an alphanumeric string (allowed characters: `A-Z, a-z, 1-9, +, -, /, =, .`), maximum length of this string is 256 characters. The token will be sent with all requests in the `Authorization` header, like this:
 
-```Authorization: Bearer TOKEN```
+```
+Authorization: Bearer TOKEN
+```
 
 ## Status
 
-```GET /auth```
+```
+GET /auth
+```
 
 ### Response
 
@@ -49,7 +53,9 @@ The token must be an alphanumeric string (allowed characters: `A-Z, a-z, 1-9, +,
 
 ## Start the authentication process
 
-```POST /auth/start```
+```
+POST /auth/start
+```
 
 ### Response
 
@@ -65,7 +71,9 @@ The client is then expected to forward (or open a window/tab) the user to `/auth
 
 ## Check state of the authentication process
 
-```GET /auth/state```
+```
+GET /auth/state
+```
 
 ### Parameters
 
@@ -93,7 +101,9 @@ The client is then expected to forward (or open a window/tab) the user to `/auth
 
 ## Renew a token
 
-```GET /auth/renew```
+```
+GET /auth/renew
+```
 
 This endpoint is used for renewing tokens nearing expiration. The server is supposed to create a new token with a new expiration date or respond with a 401 Unauthorized status code to force the client to redo the authentication process.
 

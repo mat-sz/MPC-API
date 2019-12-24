@@ -19,8 +19,7 @@ The functionality of this API is subject to change without notice until it's fin
 - [Search](Search)
 - [Settings](Settings)
 
-<sup>* - required</sup>
-
+<sup>* - required</sup>  
 <sup>+ - suggested</sup>
 
 ## Current Version
