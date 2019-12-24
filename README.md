@@ -25,7 +25,33 @@ The functionality of this API is subject to change without notice until it's fin
 
 ## Current Version
 
-**v0**, using the prefix `/api/v0`.
+**0**, using the prefix `/api/v0`.
+
+## JSON structure
+
+All JSON responses are structured in the following way:
+
+- A `data` key that contains the response itself.
+- An `error` key that contains an error.
+
+Either a `data` key or an `error` key must be present. If none (or both) is present the response is erroneous and should be discarded.
+
+## Errors
+
+If an error occurs, the server is expected to return a JSON object that contains an `error` property, with a 4xx or 5xx HTTP status code. When no errors occur the server must return a 200 OK status code.
+
+The server should return a 501 Not Implemented status code for endpoints that aren't supported by the server but are listed in the documentation.
+
+### Error response
+
+```json
+{
+    "error": {
+        "statusCode": 401,
+        "message": "Authorization required."
+    }
+}
+```
 
 ## CORS
 
@@ -44,20 +70,3 @@ Preflight (OPTIONS) requests must be supported as well. [Authentication](Authent
 ## HTTPS
 
 HTTPS (and WSS for WebSockets) is recommended, but not required. This may change in future versions of the API.
-
-## Errors
-
-If an error occurs, the server is expected to return a JSON object that contains an `error` property, with a 4xx or 5xx HTTP status code. When no errors occur the server must return a 200 OK status code.
-
-The server should return a 501 Not Implemented status code for endpoints that aren't supported by the server but are listed in the documentation.
-
-### Error response
-
-```json
-{
-    "error": {
-        "statusCode": 401,
-        "message": "Authorization required."
-    }
-}
-```
