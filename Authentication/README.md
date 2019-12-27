@@ -28,6 +28,7 @@ GET /auth
 
 ```json
 {
+    "success": true,
     "data": {
         "user": null,
         "authenticationRequired": false,
@@ -39,6 +40,7 @@ GET /auth
 
 ```json
 {
+    "success": true,
     "data": {
         "user": {
             "name": "User name"
@@ -61,6 +63,7 @@ POST /auth/start
 
 ```json
 {
+    "success": true,
     "data": {
         "key": "NZqgSgk158dNoLr45hIhXCLFWJ67SgBFzGxfCMACMajgcv65WkD6syPs2nEVp3fy"
     }
@@ -83,6 +86,7 @@ GET /auth/state
 
 ```json
 {
+    "success": true,
     "data": {
         "state": "successful",
         "token": "x1gKwKSaKNYqLqL9oLjm8hPbZdktp4wn1ijE7ZO3r19gB3jqzFXpBm3MV68yjHIu",
@@ -111,6 +115,7 @@ This endpoint is used for renewing tokens nearing expiration. The server is supp
 
 ```json
 {
+    "success": true,
     "data": {
         "token": "Owqa83Yvlzv1R8eh89iHCAoSAkQAVg7ALDv0QYDeFEkGoaMhWCopk4Q0yoTeVDT2",
         "tokenExpiration": "2020-01-07T10:00:00.000Z"

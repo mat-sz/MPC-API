@@ -30,10 +30,11 @@ The functionality of this API is subject to change without notice until it's fin
 
 All JSON responses are structured in the following way:
 
+- A `success` key with a boolean value.
 - A `data` key that contains the response itself.
 - An `error` key that contains an error.
 
-Either a `data` key or an `error` key must be present. If none (or both) is present the response is erroneous and should be discarded.
+**Only one** of the following must be present: a `data` key or an `error` key. If none (or both) is present the response is erroneous and should be discarded. A `success` key is required on all responses.
 
 ## Errors
 
@@ -45,8 +46,8 @@ The server should return a 501 Not Implemented status code for endpoints that ar
 
 ```json
 {
+    "success": false,
     "error": {
-        "statusCode": 401,
         "message": "Authorization required."
     }
 }

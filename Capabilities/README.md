@@ -12,6 +12,7 @@ GET /about
 
 ```json
 {
+    "success": true,
     "data": {
         "name": "MPC-API Server",
         "description": "A description.",
