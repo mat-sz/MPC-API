@@ -56,7 +56,7 @@ GET /auth
 ## Start the authentication process
 
 ```
-POST /auth/start
+POST /auth
 ```
 
 ### Response
@@ -106,7 +106,7 @@ GET /auth/state
 ## Renew a token
 
 ```
-GET /auth/renew
+POST /auth/renew
 ```
 
 This endpoint is used for renewing tokens nearing expiration. The server is supposed to create a new token with a new expiration date or respond with a 401 Unauthorized status code to force the client to redo the authentication process.
