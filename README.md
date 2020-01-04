@@ -32,7 +32,7 @@ The functionality of this API is subject to change without notice until it's fin
 
 ## Reference client implementations
 
-None (yet).
+* [mpc-client-ugly](https://github.com/mat-sz/mpc-client-ugly)
 
 ## JSON structure
 
