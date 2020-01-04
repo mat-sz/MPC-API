@@ -26,6 +26,14 @@ The functionality of this API is subject to change without notice until it's fin
 
 **0**, using the prefix `/api/v0`.
 
+## Reference server implementations
+
+* [mpc-server-spotify](https://github.com/mat-sz/mpc-server-spotify)
+
+## Reference client implementations
+
+None (yet).
+
 ## JSON structure
 
 All JSON responses are structured in the following way:
