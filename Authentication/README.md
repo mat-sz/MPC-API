@@ -59,6 +59,10 @@ GET /auth
 POST /auth
 ```
 
+### Parameters
+
+You can optionally specify a `redirectUri` that will be used instead of `window.close()`. All servers must support that.
+
 ### Response
 
 ```json
@@ -70,7 +74,7 @@ POST /auth
 }
 ```
 
-The client is then expected to forward (or open a window/tab) the user to `/auth/continue&key=NZqgSgk158dNoLr45hIhXCLFWJ67SgBFzGxfCMACMajgcv65WkD6syPs2nEVp3fy`. Authentication flow within the window is not standardized by the documentation, the only requirement is for the window to be closed using the `window.close()` JavaScript call.
+The client is then expected to forward (or open a window/tab) the user to `/auth/continue?key=NZqgSgk158dNoLr45hIhXCLFWJ67SgBFzGxfCMACMajgcv65WkD6syPs2nEVp3fy`. Authentication flow within the window is not standardized by the documentation, the only requirement is for the window to be closed using the `window.close()` JavaScript call.
 
 ## Check state of the authentication process
 
