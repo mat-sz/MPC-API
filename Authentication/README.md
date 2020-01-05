@@ -10,7 +10,7 @@ The process itself is as follows:
 2. Upon clicking on the "Sign in" button, the client will make a [Start](#start-the-authentication-process) request, opening a new window with the parameters from the JSON payload.
 3. When the window is closed, the client will [check](#check-state-of-the-authentication-process) whether the authentication process was successful. Some clients may perform the check multiple times. The server is required to store (and serve) the results of the authentication process for at least 300 seconds.
 
-The token must be an alphanumeric string (allowed characters: `A-Z, a-z, 1-9, +, -, /, =, .`), maximum length of this string is 256 characters. The token will be sent with all requests in the `Authorization` header, like this:
+The token must be an alphanumeric string (allowed characters: `A-Z, a-z, 1-9, +, -, /, =, .`), maximum length of this string is 2048 characters. The token will be sent with all requests in the `Authorization` header, like this:
 
 ```
 Authorization: Bearer TOKEN
