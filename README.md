@@ -42,7 +42,17 @@ All JSON responses are structured in the following way:
 - A `data` key that contains the response itself.
 - An `error` key that contains an error.
 
-**Only one** of the following must be present: a `data` key or an `error` key. If none (or both) is present the response is erroneous and should be discarded. A `success` key is required on all responses.
+**The `success` key is required on all responses.**
+
+If `success` is set to true:
+
+* The response must not contain an `error` key.
+* The `data` key is optional.
+
+If `success` is set to false:
+    
+* The response must not contain a `data` key.
+* The response must contain an `error` key.
 
 ## Errors
 
