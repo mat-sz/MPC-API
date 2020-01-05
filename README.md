@@ -4,6 +4,8 @@
 
 This repository contains a description of the Media Playback Control API. The API is designed to allow the reuse of one media player front end across multiple media players (with the use of plugins or node.js-based servers to control them remotely). Requests and responses are made using JSON payloads, with base64-encoded images (and other binary files) as string contents of given fields.
 
+All timespan fields are in miliseconds. All date fields are in the ISO string format (.toISOString in JavaScript).
+
 The functionality of this API is subject to change without notice until it's finalized.
 
 [**Capabilities**](Capabilities) is the only functionality that must be implemented on the server side, others are not required. Clients must support everything allowed by the API.
